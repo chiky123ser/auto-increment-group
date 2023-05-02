@@ -1,0 +1,45 @@
+{
+  "parser": "@babel/eslint-parser",
+  "extends": "airbnb",
+  "env": {
+    "node":true,
+    "mocha":true,
+    "es6": true
+  },
+  "globals": {
+    "logger": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "requireConfigFile": false
+  },
+  "rules": {
+    // disable requiring trailing commas
+    "arrow-body-style": "off",
+    "comma-dangle": 0,
+    "indent": ["error", 4],
+    "no-underscore-dangle": "off",
+    "import/prefer-default-export": "off",
+    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
+    "max-len": ["error", {"code": 120, "ignoreComments": true, "ignoreUrls": true, "ignoreStrings": true}],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+    "func-names": "off",
+    "react/jsx-filename-extension": [0],
+    "import/extensions": "off",
+    "no-plusplus": "off",
+    "no-param-reassign": 0,
+    "no-useless-constructor": "off",
+    "object-curly-newline": "off",
+    "import/no-unresolved": ["error", { "ignore": [
+      "#root/*", "#src/*", "#contracts/*",
+      "#entities/*", "#enums/*",
+      "#frameworks/*", "#utils/*", "#logger/*"
+    ] }]
+  },
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  }
+}

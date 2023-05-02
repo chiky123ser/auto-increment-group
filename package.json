@@ -1,0 +1,36 @@
+{
+  "name": "auto-increment-group",
+  "version": "1.0.3",
+  "description": "plugin mongoose auto increment ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Servando",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^7.0.4"
+  },
+  "keywords": [
+    "mongoose",
+    "auto",
+    "increment",
+    "group",
+    "plugin",
+    "auto-increment",
+    "automatic",
+    "autoincrement",
+    "auto_increment",
+    "autoinc",
+    "auto-inc",
+    "auto_inc"
+  ],
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^10.2.0"
+  }
+}

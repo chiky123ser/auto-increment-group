@@ -1,0 +1,92 @@
+# OS
+# ===========
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Node and related ecosystem
+# ==========================
+.nodemonignore
+.sass-cache/
+node_modules/
+public/lib/
+app/tests/coverage/
+.idea/
+coverage/
+.coveralls.yml
+
+# MEAN.js app and assets
+# ======================
+assets/
+public/dist/
+uploads
+modules/users/client/img/profile/uploads
+config/env/local.js
+config/env/local-*.js
+public/javascripts/apiCheckout/
+
+# Compiled less and sass files
+# ============================
+modules/*/client/scss/*.css
+modules/*/client/less/*.css
+
+# Ignoring MEAN.JS's gh-pages branch for documenation
+_site/
+
+# General
+# =======
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.tmp
+*.bak
+*.swp
+logs/
+build/
+
+# Sublime editor
+# ==============
+.sublime-project
+*.sublime-project
+*.sublime-workspace
+
+# IntelliJ
+# ========
+*.iml
+
+# Cloud9 IDE
+# =========
+.c9/
+data/
+mongod
+
+
+# Files from style template
+# ============================
+public/stylesheets/css/
+public/fonts/
+# DEPRECATED
+# New structure in Cucumber, will keep a local copy
+#public/img/
+
+
+# Bower dependencies
+# ============================
+bower_components/
+
+
+# Papaya template related DEPRECATED
+# Moved to a Cucumber, and no project with pug is required!
+# ============================
+#views/mixins/
+
+# Folder Logs
+# ======================
+logs/
+log/
+
+.package.json
