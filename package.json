@@ -1,6 +1,6 @@
 {
   "name": "auto-increment-group",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "plugin mongoose auto increment ",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "mongoose": "^7.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chiky123ser/auto-increment-group"
   },
   "keywords": [
     "mongoose",
