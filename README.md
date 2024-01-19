@@ -129,6 +129,20 @@ await Document.nextCount({
     company: '1', 
     floor: '1'
 });
+
+await Document.nextCount(null, );
+
+
+// A mongoose session may be passed to the static method as a second parameter.
+const session = await mongoose.connection.startSession();
+session.startTransaction();
+
+await Document.nextCount('1', session);
+await Document.nextCount('2', session);
+await Document.nextCount({
+    company: '1', 
+    floor: '1'
+}, session);
 ```
 
 ### resetCount
@@ -147,5 +161,18 @@ await Document.resetCount({
     company: '1',
     floor: '1'
 });
+
+
+// A mongoose session may be passed as a second parameter.
+const session = await mongoose.connection.startSession();
+session.startTransaction();
+
+
+await Document.resetCount(session);
+await Document.resetCount('1', session);
+await Document.resetCount({
+    company: '1',
+    floor: '1'
+}, session);
 ```
 
