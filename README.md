@@ -8,14 +8,14 @@
 ## installation <a name="id1"></a>
 
 ```
-npm install auto-increment-mongoose
+npm install auto-increment-group
 ```
 
 ## Getting Started <a name="id2"></a>
 
 ```javascript
 import mongoose from 'mongoose';
-import { autoInc } from 'auto-increment-mongoose';
+import { autoInc } from 'auto-increment-group';
 
 const schema = new mongoose.Schema({
     serialNumber: {
@@ -69,7 +69,7 @@ await document2_1.save() // { serialNumber: "0001", name: 'document2_1', company
 
 ```javascript
 import mongoose from 'mongoose';
-import { autoInc } from 'auto-increment-mongoose';
+import { autoInc } from 'auto-increment-group';
 
 const schema = new mongoose.Schema({
     serialNumber: {
@@ -129,6 +129,17 @@ await Document.nextCount({
     company: '1', 
     floor: '1'
 });
+
+// A mongoose session may be passed to the static method as a second parameter.
+const session = await mongoose.connection.startSession();
+session.startTransaction();
+
+await Document.nextCount('1', session);
+await Document.nextCount('2', session);
+await Document.nextCount({
+    company: '1', 
+    floor: '1'
+}, session);
 ```
 
 ### resetCount
@@ -147,5 +158,18 @@ await Document.resetCount({
     company: '1',
     floor: '1'
 });
+
+
+// A mongoose session may be passed as a second parameter.
+const session = await mongoose.connection.startSession();
+session.startTransaction();
+
+
+await Document.resetCount(session);
+await Document.resetCount('1', session);
+await Document.resetCount({
+    company: '1',
+    floor: '1'
+}, session);
 ```
 
