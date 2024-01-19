@@ -8,14 +8,14 @@
 ## installation <a name="id1"></a>
 
 ```
-npm install auto-increment-mongoose
+npm install auto-increment-group
 ```
 
 ## Getting Started <a name="id2"></a>
 
 ```javascript
 import mongoose from 'mongoose';
-import { autoInc } from 'auto-increment-mongoose';
+import { autoInc } from 'auto-increment-group';
 
 const schema = new mongoose.Schema({
     serialNumber: {
@@ -69,7 +69,7 @@ await document2_1.save() // { serialNumber: "0001", name: 'document2_1', company
 
 ```javascript
 import mongoose from 'mongoose';
-import { autoInc } from 'auto-increment-mongoose';
+import { autoInc } from 'auto-increment-group';
 
 const schema = new mongoose.Schema({
     serialNumber: {
