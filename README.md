@@ -130,9 +130,6 @@ await Document.nextCount({
     floor: '1'
 });
 
-await Document.nextCount(null, );
-
-
 // A mongoose session may be passed to the static method as a second parameter.
 const session = await mongoose.connection.startSession();
 session.startTransaction();
